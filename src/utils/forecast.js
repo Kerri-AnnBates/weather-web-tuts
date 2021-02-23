@@ -12,8 +12,8 @@ const forecast = (latitude, longitude, callback) => {
 
         } else {
             const currentData = body.current;
-            callback(undefined, currentData.weather_descriptions + '. It is currently ' + currentData.temperature + ' degress out. There is a ' + currentData.precip + '% chance of rain.');
 
+            callback(undefined, 'It is ' + currentData.weather_descriptions + '. Temperature is currently ' + currentData.temperature + ' degress. It feels like ' + currentData.feelslike + ' degrees. There is a ' + currentData.precip + '% chance of rain.');
         }
 
     });
